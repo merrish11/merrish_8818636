@@ -27,7 +27,7 @@ video_title_link.click()
 time.sleep(5)
 
 # Watching the video for five seconds
-time.sleep(10)
+time.sleep(7)
 
 # Navigating to the YouTube Trending page
 driver.get("https://www.youtube.com/feed/trending")
@@ -37,8 +37,8 @@ time.sleep(5)
 first_video_link = driver.find_element("xpath", "//ytd-video-renderer[1]//a[@id='thumbnail']")
 first_video_link.click()
 
-# Waiting for the channel page to load
-time.sleep(8)
+# Waiting for the video page to load
+time.sleep(5)
 
 # Liking the video
 like_button = driver.find_element("xpath", "//button[contains(@aria-label, 'like this video')]")
