@@ -4,6 +4,7 @@ import time
 
 # Setting up the webdriver
 driver = webdriver.Chrome()
+driver.maximize_window()
 
 # Navigating to the YouTube homepage
 driver.get("https://www.youtube.com")
@@ -11,14 +12,14 @@ time.sleep(3)
 
 # Finding the search bar and entering text
 search_bar = driver.find_element("name", "search_query")
-search_bar.send_keys("OpenAI")
+search_bar.send_keys("Software Testing Methodologies")
 search_bar.send_keys(Keys.RETURN)
 
 # Waiting for the search results page to load
 time.sleep(5)
 
 # Verifying that the search results page has loaded
-assert "OpenAI" in driver.title
+assert "Software Testing Methodologies" in driver.title
 video_title_link = driver.find_element("xpath", "//a[@id='video-title']")
 video_title_link.click()
 
